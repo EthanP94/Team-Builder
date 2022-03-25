@@ -1,10 +1,10 @@
 const inquirer = require("inquirer")
-const path = require("path")
+// const path = require("path")
 const fs = require("fs")
 
-const engineer = require("./lib/Engineer")
-const manager = require("./lib/Manager")
-const intern = require("./lib/Inter")
+const Engineer = require("./lib/Engineer")
+const Manager = require("./lib/Manager")
+const Intern = require("./lib/Inter")
 
 const {
     generateEngineerCard,
@@ -40,7 +40,7 @@ function init() {
               },
         ])
         .then(({name, id, email, officeNumber}) => {
-                const manager = new Manager(id, name, email, officeNumber);
+                const manager = new Manager( name, id, email, officeNumber);
                 teamMemberHtmlArr.push(generateManagerCard(manager));
                 mainMenu();
         });
@@ -85,12 +85,12 @@ function init() {
               },
               {
                 type: 'input',
-                name: 'iithub',
+                name: 'github',
                 message: 'What is your Github?',
               },
         ])
         .then(({name, id, email, github}) => {
-                const engineer = new engineer(id, name, email, github);
+                const engineer = new Engineer(id, name, email, github);
                 teamMemberHtmlArr.push(generateEngineerCard(engineer));
                 mainMenu();
         });
@@ -115,7 +115,7 @@ function init() {
               },
               {
                 type: 'input',
-                name: 'iithub',
+                name: 'school',
                 message: 'What is your school?',
               },
         ])

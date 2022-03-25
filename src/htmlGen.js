@@ -1,11 +1,11 @@
 const generateManagerCard = (manager) => {
     return `
     <div class="card">
-        <h3>${manager.getname()}<h3>
+        <h3>${manager.getName()}<h3>
         <p><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}r</p>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${manager.getId()}</li>
+                <li class="list-group-item">${manager.getid()}</li>
                 <li class="list-group-item">Email: <a herf="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li class="list-group-item">${manager.getOfficeNumber()}</li>
             </ul>
@@ -17,7 +17,7 @@ const generateManagerCard = (manager) => {
 const generateEngineerCard = (engineer) => {
     return `
     <div class="card">
-        <h3>${engineer.getname()}<h3>
+        <h3>${engineer.getName()}<h3>
         <p><i class="fa-solid fa-mug-hot"></i>${engineer.getRole()}r</p>
         <div class="card-body">
             <ul class="list-group list-group-flush">
@@ -33,7 +33,7 @@ const generateEngineerCard = (engineer) => {
 const generateInternCard = (intern) => {
     return `
     <div class="card">
-        <h3>${intern.getname()}<h3>
+        <h3>${intern.getName()}<h3>
         <p><i class="fa-solid fa-mug-hot"></i>${intern.getRole()}r</p>
         <div class="card-body">
             <ul class="list-group list-group-flush">
@@ -52,7 +52,7 @@ const baseHtml = (hmltArr) => `
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta N="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
