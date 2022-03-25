@@ -5,7 +5,7 @@ const generateManagerCard = (manager) => {
         <p><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}r</p>
         <div class="card-body">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">${manager.getid()}</li>
+                <li class="list-group-item">${manager.getId()}</li>
                 <li class="list-group-item">Email: <a herf="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
                 <li class="list-group-item">${manager.getOfficeNumber()}</li>
             </ul>

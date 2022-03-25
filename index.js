@@ -4,7 +4,7 @@ const fs = require("fs")
 
 const Engineer = require("./lib/Engineer")
 const Manager = require("./lib/Manager")
-const Intern = require("./lib/Inter")
+const Intern = require("./lib/Intern")
 
 const {
     generateEngineerCard,
@@ -90,7 +90,7 @@ function init() {
               },
         ])
         .then(({name, id, email, github}) => {
-                const engineer = new Engineer(id, name, email, github);
+                const engineer = new Engineer(name, id, email, github);
                 teamMemberHtmlArr.push(generateEngineerCard(engineer));
                 mainMenu();
         });
@@ -120,7 +120,7 @@ function init() {
               },
         ])
         .then(({name, id, email, school}) => {
-                const intern = new Intern(id, name, email, school);
+                const intern = new Intern(name, id, email, school);
                 teamMemberHtmlArr.push(generateInternCard(intern));
                 mainMenu();
         });
