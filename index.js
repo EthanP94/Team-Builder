@@ -6,12 +6,10 @@ const Engineer = require("./lib/Engineer")
 const Manager = require("./lib/Manager")
 const Intern = require("./lib/Intern")
 
-const {
-    generateEngineerCard,
+const {generateEngineerCard,
     generateInternCard,
     generateManagerCard,
-    baseHtml} 
-    = require("./src/htmlGen")
+    baseHtml} = require("./src/htmlGen")
 
 const teamMemberHtmlArr = [];
 
@@ -125,12 +123,15 @@ function init() {
                 mainMenu();
         });
 
-    }
+    };
 
     function generateHtml (){
-        fs.watchFile("./dist/index.html", baseHtml(teamMemberHtmlArr), (err) => {
-            err ? console.log(err) : console.log("Generated HTML File")
-        })
+        fs.watchFile(
+          "./dist/index.html", 
+          baseHtml(teamMemberHtmlArr), 
+          (err) => {
+            err ? console.log(err) : console.log(" Generated HTML File ")
+        });
     };
 
     managerCreate();
