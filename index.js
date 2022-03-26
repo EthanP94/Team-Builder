@@ -58,7 +58,7 @@ function init() {
                 case "Engineer":
                     return engineerCreate();
                 case "Intern":
-                    return internCreate()
+                    return internCreate();
                 default: 
                     return generateHtml();
             }
@@ -126,7 +126,7 @@ function init() {
     };
 
     function generateHtml (){
-        fs.watchFile(
+        fs.writeFile(
           "./dist/index.html", 
           baseHtml(teamMemberHtmlArr), 
           (err) => {
