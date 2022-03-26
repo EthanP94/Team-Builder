@@ -60,7 +60,7 @@ function init() {
                 case "Intern":
                     return internCreate()
                 default: 
-                    return generateHtml;
+                    return generateHtml();
             }
         })
     }
