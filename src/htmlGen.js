@@ -36,7 +36,7 @@ const generateEngineerCard = (engineer) => {
 
 const generateInternCard = (intern) => {
     return `
-    <div class="bg-light mb-3 col-4 mt-4" style="max-width: 18rem;>
+    <div class="bg-info mb-3 col-4 mt-4" style="max-width: 18rem;>
         <div class="card h-100">
             <div class="card-header">
                 <h3>${intern.getName()}</h3>
